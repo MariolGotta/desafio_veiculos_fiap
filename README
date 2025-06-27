@@ -1,0 +1,84 @@
+# 🚗 Sistema de Veículos - Desafio FIAP
+
+Sistema completo de compra e venda de veículos utilizando **FastAPI**, **PostgreSQL** e **Neo4j**.
+
+## 🏗️ Arquitetura
+
+- **Backend**: FastAPI (Python)
+- **Banco Relacional**: PostgreSQL (usuários)
+- **Banco de Grafos**: Neo4j (veículos e relacionamentos)
+- **Containerização**: Docker + Docker Compose
+
+## 🚀 Como executar
+
+### Pré-requisitos
+- Docker
+- Docker Compose
+- Python 3.11+
+
+### Executar o projeto
+```bash
+# 1. Clone o repositório
+git clone https://github.com/MariolGotta/desafio_veiculos_fiap.git
+cd desafio_veiculos_fiap
+
+# 2. Subir os containers
+docker-compose up -d
+
+# 3. Acessar a aplicação
+
+
+
+
+📚 Endpoints
+API Principal
+
+Documentação: http://localhost:8000/docs
+API: http://localhost:8000
+
+Bancos de Dados
+
+Neo4j Browser: http://localhost:7474
+
+Usuário: neo4j
+Senha: novasenha123
+
+
+
+🧪 Testando a API
+Acesse http://localhost:8000/docs para testar todos os endpoints:
+Usuários (PostgreSQL)
+
+POST /usuarios/ - Criar usuário
+POST /usuarios/login - Login
+
+Veículos (Neo4j)
+
+POST /veiculos/ - Criar veículo
+GET /veiculos/ - Listar veículos
+GET /veiculos/categoria/{categoria} - Filtrar por categoria
+POST /veiculos/interesse/{veiculo_id} - Demonstrar interesse
+
+📁 Estrutura do Projeto
+projeto-veiculos/
+├── app/
+│   ├── config/         # Configurações de banco
+│   ├── models/         # Models SQLAlchemy
+│   ├── schemas/        # Schemas Pydantic
+│   ├── routes/         # Endpoints da API
+│   ├── services/       # Lógica de negócio
+│   └── main.py         # Aplicação principal
+├── docker-compose.yml  # Configuração Docker
+├── Dockerfile         # Build da aplicação
+└── requirements.txt   # Dependências Python
+🛠️ Tecnologias
+
+FastAPI - Framework web
+PostgreSQL - Banco relacional
+Neo4j - Banco de grafos
+Docker - Containerização
+SQLAlchemy - ORM
+Pydantic - Validação de dados
+
+👨‍💻 Autor
+Mario Gottardello - FIAP Pós-Graduação Machine Learning
